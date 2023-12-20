@@ -1,0 +1,12 @@
+[
+    {
+        "model": "myapp.admin",
+        "pk": 1,
+        "fields": {
+            "name": "michael Doe",
+            "email": "admin@example.com",
+            "password":"admin"
+        }
+    }
+    
+]
