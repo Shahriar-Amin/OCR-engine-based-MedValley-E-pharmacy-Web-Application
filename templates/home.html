@@ -1,0 +1,1499 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static%}
+    <!-- Links of CSS files -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo/medvalley.png' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/boxicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fancybox1.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/rangeSlider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+    <title>MedValley</title>
+
+    <link rel="icon" type="image/png" href="{% static 'assets/img/medvalley.png' %}">
+</head>
+
+<body>
+
+    
+    <!-- Start Top Header Area -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-7">
+                    <ul class="top-header-contact-info">
+                        <li><i class='bx bx-phone-call'></i> <a href="tel:+1234567898">(+123) 456-7898</a></li>
+                        <li><i class='bx bx-map'></i> <a href="#" target="_blank">6890 Blvd, The Bronx, NY 1058, USA</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 col-md-5">
+                    <ul class="top-header-menu">
+                        
+                        <li>
+                            {% if user_credentials %}
+                            <span><b>Hello, {{users.Customer_Name}}</b></span>
+                            {%else%}
+                            <a href="{% url 'login.html'%}">Hello, Sign In</a>
+                            <h5 class="tp-header-login-title">Your Account</h5>
+                            {% endif %}
+                        </li>
+                        <li>{% if user_credentials or user_id %}
+                            <a href="{% url 'profile.html' %}" class="nav-link">My Account</a>
+                            {% else %}
+                            <a href="{% url 'login.html' %}" class="nav-link" onclick="javascript:alert('please login to an account')">My account</a>
+                            
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Header Area -->
+
+    <!-- Start Navbar Area -->
+    <div class="navbar-area">
+        <div class="drodo-responsive-nav">
+            <div class="container">
+                <div class="drodo-responsive-menu">
+                    <div class="logo">
+                        <a href="{% url 'home.html' %}">
+                            <img src="{% static 'assets/img/medvalley.png' %}" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="drodo-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="{% url 'home.html' %}">
+                        <img src="{% static 'assets/img/medvalley.png' %}" alt="logo"><b>MedValley</b>
+
+                    </a>
+
+                    <div class="collapse navbar-collapse mean-menu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="{% url 'products' %}" class="nav-link">Products<i class=''></i></a>
+
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <div class="container">
+                                        <div class="row">
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </li>
+
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+
+                                            </div>
+
+                                            <div class="col">
+
+                                            </div>
+
+                                            <div class="col">
+
+                                            </div>
+
+                                            <div class="col">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </li>
+
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+
+                                            </div>
+
+                                            <div class="col">
+
+                                            </div>
+
+                                            <div class="col">
+
+                                            </div>
+
+                                            <div class="col">
+                                                <ul class="megamenu-submenu">
+                                                    <li>
+                                                        <div class="aside-trending-products">
+                                                            <img src="assets/img/navbar/navbar-img1.jpg" alt="image">
+
+                                                            <div class="category">
+                                                                <h4>Top Trending</h4>
+                                                            </div>
+
+                                                            <a href="#" class="link-btn"></a>
+                                                        </div>
+
+                                                        <div class="aside-trending-products">
+                                                            <img src="assets/img/navbar/navbar-img2.jpg" alt="image">
+
+                                                            <div class="category">
+                                                                <h4>Popular Products</h4>
+                                                            </div>
+
+                                                            <a href="#" class="link-btn"></a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </li>
+
+
+                            <ul class="dropdown-menu">
+
+                            </ul>
+                            </li>
+
+                            <li class="nav-item">
+
+                            </li>
+                        </ul>
+
+                        <div class="others-option">
+
+                            <div class="option-item">
+                                
+                            </div>
+
+                            <div class="option-item">
+                                <div class="search-btn-box">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
+
+    <!-- Start Search Overlay -->
+    <div class="search-overlay">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="search-overlay-layer"></div>
+                <div class="search-overlay-layer"></div>
+                <div class="search-overlay-layer"></div>
+
+                <div class="search-overlay-close">
+                    <span class="search-overlay-close-line"></span>
+                    <span class="search-overlay-close-line"></span>
+                </div>
+
+                <div class="search-overlay-form">
+                    <form>
+                        <input type="text" class="input-search" placeholder="Search here...">
+                        <button type="submit"><i class='bx bx-search-alt'></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Search Overlay -->
+
+    <!-- Start Home Slides Area -->
+    <section class="home-slides owl-carousel owl-theme">
+        <div class="single-banner-item">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-md-12">
+                                <div class="banner-content">
+                                    <span class="sub-title">New Arrivals</span>
+                                    <h1>Triton Grip Nitrile <span>Gloves</span></h1>
+                                    <p>Gloves protect our hands from a variety of things. Nitrile gloves are comfortable to wear.</p>
+                                    <div class="btn-box">
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="default-btn"><i class="flaticon-trolley"></i> Add To Cart</a>
+                                            <span class="price">$50.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7 col-md-12">
+                                <div class="banner-image text-center">
+                                    <img src="{% static 'assets/img/banner/banner-img1.png' %}" class="main-image" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="single-banner-item">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-md-12">
+                                <div class="banner-content">
+                                    <span class="sub-title">New Arrivals</span>
+                                    <h1>Safety Glasses Protective <span>Glove</span></h1>
+                                    <p>Our glasses and protective gloves are very important for personal safety.</p>
+                                    <div class="btn-box">
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="default-btn"><i class="flaticon-trolley"></i> Add To Cart</a>
+                                            <span class="price">$79.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7 col-md-12">
+                                <div class="banner-image text-center">
+                                    <img src="{% static 'assets/img/banner/banner-img2.png' %}" class="main-image" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="single-banner-item">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-md-12">
+                                <div class="banner-content">
+                                    <span class="sub-title">New Arrivals</span>
+                                    <h1>Protective Surgical <span>Mask</span></h1>
+                                    <p>Surgical masks can protect ourselves from various germs. Everyone should use this surgical mask.</p>
+                                    <div class="btn-box">
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="default-btn"><i class="flaticon-trolley"></i> Add To Cart</a>
+                                            <span class="price">$30.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7 col-md-12">
+                                <div class="banner-image text-center">
+                                    <img src="{% static 'assets/img/banner/banner-img3.png' %}" class="main-image" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Home Slides Area -->
+
+    <!-- Start Banner Categories Area -->
+    <section class="banner-categories-area pt-70 pb-40">
+        <div class="container">
+        </div>
+    </section>
+    <!-- End Banner Categories Area -->
+
+    <!-- Start Categories Area -->
+    <section class="categories-area pb-40">
+        <div class="container">
+            <div class="section-title">
+                <h2>Categories</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2 col-sm-4 col-md-4">
+                    <div class="single-categories-box">
+                        <img src="{% static 'assets/img/categories/Antibiotic.png' %}" alt="image">
+                        <h3>Antibiotics</h3>
+                        <a href="{% url 'products' %}" class="link-btn"></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-4 col-md-4">
+                    <div class="single-categories-box">
+                        <img src="{% static 'assets/img/categories/Cardio.png' %}" alt="image">
+                        <h3>Cardiac Medicine</h3>
+                        <a href="{% url 'products' %}" class="link-btn"></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-4 col-md-4">
+                    <div class="single-categories-box">
+                        <img src="{% static 'assets/img/categories/Contraceptive.png' %}" alt="image">
+                        <h3>Contraceptive</h3>
+                        <a href="{% url 'products' %}" class="link-btn"></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-4 col-md-4">
+                    <div class="single-categories-box">
+                        <img src="{% static 'assets/img/categories/Diabetes.png' %}" alt="image">
+                        <h3>Diabetes</h3>
+                        <a href="{% url 'products' %}" class="link-btn"></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-4 col-md-4">
+                    <div class="single-categories-box">
+                        <img src="{% static 'assets/img/categories/Painkiller.png' %}" alt="image">
+                        <h3>Pain Killer</h3>
+                        <a href="{% url 'products' %}" class="link-btn"></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-4 col-md-4">
+                    <div class="single-categories-box">
+                        <img src="{% static 'assets/img/categories/Sleeping_pills.png' %}" alt="image">
+                        <h3>Sleeping Pills</h3>
+                        <a href="{% url 'products' %}" class="link-btn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Categories Area -->
+
+    <!-- Start Products Area -->
+    <section class="products-area pb-40">
+        <div class="container">
+            <div class="section-title">
+                <h2>Best Selling</h2>
+            </div>
+
+            <div class="products-slides owl-carousel owl-theme">
+                <div class="single-products-box">
+                    <div class="image">
+                        <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/kilbac.png' %}" alt="image"></a>
+
+                        <div class="new">New</div>
+
+                        <div class="buttons-list">
+                            <ul>
+                                <li>
+                                    <div class="cart-btn">
+                                        <a href="#">
+                                            <i class='bx bxs-cart-add'></i>
+                                            <span class="tooltip-label">Add to Cart</span>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3><a href="{% url 'products' %}">Kilbac</a></h3>
+                        <div class="price">
+                            <span class="new-price">$25.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-products-box">
+                    <div class="image">
+                        <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Rabeprazole.png' %}" alt="image"></a>
+
+                        <div class="sale">Sale</div>
+
+                        <div class="buttons-list">
+                            <ul>
+                                <li>
+                                    <div class="cart-btn">
+                                        <a href="#">
+                                            <i class='bx bxs-cart-add'></i>
+                                            <span class="tooltip-label">Add to Cart</span>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3><a href="{% url 'products' %}">Rabeprazole</a></h3>
+                        <div class="price">
+                            <span class="new-price">$5.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-products-box">
+                    <div class="image">
+                        <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Providac.jpg' %}" alt="image"></a>
+
+                        <div class="new">New</div>
+
+                        <div class="buttons-list">
+                            <ul>
+                                <li>
+                                    <div class="cart-btn">
+                                        <a href="#">
+                                            <i class='bx bxs-cart-add'></i>
+                                            <span class="tooltip-label">Add to Cart</span>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3><a href="{% url 'products' %}">Providac</a></h3>
+                        <div class="price">
+                            <span class="old-price">$10.00</span>
+                            <span class="new-price">$6.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-products-box">
+                    <div class="image">
+                        <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Ambrox.jpg' %}" alt="image"></a>
+
+                        <div class="new">New</div>
+
+                        <div class="buttons-list">
+                            <ul>
+                                <li>
+                                    <div class="cart-btn">
+                                        <a href="#">
+                                            <i class='bx bxs-cart-add'></i>
+                                            <span class="tooltip-label">Add to Cart</span>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3><a href="{% url 'products' %}">Ambrox</a></h3>
+                        <div class="price">
+                            <span class="new-price">$2.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-products-box">
+                    <div class="image">
+                        <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Ambrox.jpg' %}" alt="image"></a>
+
+                        <div class="new">New</div>
+
+                        <div class="buttons-list">
+                            <ul>
+                                <li>
+                                    <div class="cart-btn">
+                                        <a href="#">
+                                            <i class='bx bxs-cart-add'></i>
+                                            <span class="tooltip-label">Add to Cart</span>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="quick-view-btn">
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#productsQuickView">
+                                            <i class='bx bx-search-alt'></i>
+                                            <span class="tooltip-label">Quick View</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3><a href="{% url 'products' %}">Ambrox</a></h3>
+                        <div class="price">
+                            <span class="new-price">$2.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Products Area -->
+
+    <!-- Start Products Promotions Area -->
+    <section class="products-promotions-area pb-40">
+        <div class="container">
+
+        </div>
+    </section>
+    <!-- End Products Promotions Area -->
+
+    <!-- Start Products Area -->
+    <section class="products-area pb-40">
+        <div class="container">
+            <div class="section-title">
+                <h2>New Arrivals</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-products-box">
+                        <div class="image">
+                            <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Fexo.jpg' %}" alt="image"></a>
+
+                            <div class="buttons-list">
+                                <ul>
+                                    <li>
+                                        <div class="cart-btn">
+                                            <a href="#">
+                                                <i class='bx bxs-cart-add'></i>
+                                                <span class="tooltip-label">Add to Cart</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="{% url 'products' %}">Fexo</a></h3>
+                            <div class="price">
+                                <span class="new-price">$30.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-products-box">
+                        <div class="image">
+                            <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Candibiotic.jpg' %}" alt="image"></a>
+
+                            <div class="sale">Sale</div>
+
+                            <div class="buttons-list">
+                                <ul>
+                                    <li>
+                                        <div class="cart-btn">
+                                            <a href="#">
+                                                <i class='bx bxs-cart-add'></i>
+                                                <span class="tooltip-label">Add to Cart</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="{% url 'products' %}">Candibiotic</a></h3>
+                            <div class="price">
+                                <span class="new-price">$7.50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-products-box">
+                        <div class="image">
+                            <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Lanso.jpg' %}" alt="image"></a>
+
+                            <div class="buttons-list">
+                                <ul>
+                                    <li>
+                                        <div class="cart-btn">
+                                            <a href="#">
+                                                <i class='bx bxs-cart-add'></i>
+                                                <span class="tooltip-label">Add to Cart</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="{% url 'products' %}">Lanso</a></h3>
+                            <div class="price">
+                                <span class="new-price">$40.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-products-box">
+                        <div class="image">
+                            <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/telpromax.png' %}" alt="image"></a>
+
+                            <div class="buttons-list">
+                                <ul>
+                                    <li>
+                                        <div class="cart-btn">
+                                            <a href="#">
+                                                <i class='bx bxs-cart-add'></i>
+                                                <span class="tooltip-label">Add to Cart</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="{% url 'products' %}">Telpromax</a></h3>
+                            <div class="price">
+                                <span class="new-price">$6.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-products-box">
+                        <div class="image">
+                            <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Aristoplex.png' %}" alt="image"></a>
+
+                            <div class="buttons-list">
+                                <ul>
+                                    <li>
+                                        <div class="cart-btn">
+                                            <a href="#">
+                                                <i class='bx bxs-cart-add'></i>
+                                                <span class="tooltip-label">Add to Cart</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="{% url 'products' %}">Gavisol</a></h3>
+                            <div class="price">
+                                <span class="new-price">$8.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-products-box">
+                        <div class="image">
+                            <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Replet.jpg' %}" alt="image"></a>
+
+                            <div class="buttons-list">
+                                <ul>
+                                    <li>
+                                        <div class="cart-btn">
+                                            <a href="#">
+                                                <i class='bx bxs-cart-add'></i>
+                                                <span class="tooltip-label">Add to Cart</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="{% url 'products' %}">Omedon</a></h3>
+                            <div class="price">
+                                <span class="old-price">$5.00</span>
+                                <span class="new-price">$1.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-products-box">
+                        <div class="image">
+                            <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Olicare_lotion.jpg' %}" alt="image"></a>
+
+                            <div class="buttons-list">
+                                <ul>
+                                    <li>
+                                        <div class="cart-btn">
+                                            <a href="#">
+                                                <i class='bx bxs-cart-add'></i>
+                                                <span class="tooltip-label">Add to Cart</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="{% url 'products' %}">Olicare_lotion</a></h3>
+                            <div class="price">
+                                <span class="new-price">$4.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-products-box">
+                        <div class="image">
+                            <a href="{% url 'products' %}" class="d-block"><img src="{% static 'assets/img/products/Clopilet.png' %}" alt="image"></a>
+
+                            <div class="sale">Sale</div>
+
+                            <div class="buttons-list">
+                                <ul>
+                                    <li>
+                                        <div class="cart-btn">
+                                            <a href="#">
+                                                <i class='bx bxs-cart-add'></i>
+                                                <span class="tooltip-label">Add to Cart</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="{% url 'products' %}">Cholcut</a></h3>
+                            <div class="price">
+                                <span class="new-price">$6.50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Products Area -->
+
+    <!-- Start Hot Deal Area -->
+
+    <!-- End Hot Deal Area -->
+
+    <!-- Start Brands Area -->
+
+    <!-- End Brands Area -->
+
+    <!-- Start Blog Area -->
+    <section class="blog-area pb-40">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Blog</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-post">
+                        <div class="post-image">
+                            <a href="{% url 'blog.html'%}" class="d-block"><img src="{% static 'assets/img/blog/blog-img1.jpg' %}" alt="image"></a>
+                        </div>
+
+                        <div class="post-content">
+                            <h3><a href="{% url 'blog.html'%}">A researcher is conducting research on coronavirus in the lab</a></h3>
+                            <ul class="post-meta align-items-center d-flex">
+                                <li>
+                                    <div class="flex align-items-center">
+                                        <img src="{% static 'assets/img/user1.jpg' %}" alt="image">
+                                        <a href="#">Nathan Oritz</a>
+                                    </div>
+                                </li>
+                                <li>06-06-2021</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-post">
+                        <div class="post-image">
+                            <a href="{% url 'blog.html'%}" class="d-block"><img src="{% static 'assets/img/blog/blog-img2.jpg' %}" alt="image"></a>
+                        </div>
+
+                        <div class="post-content">
+                            <h3><a href="{% url 'blog.html'%}">You have to wash your hands for 20 seconds to keep yourself free</a></h3>
+                            <ul class="post-meta align-items-center d-flex">
+                                <li>
+                                    <div class="flex align-items-center">
+                                        <img src="{% static 'assets/img/user2.jpg' %}" alt="image">
+                                        <a href="#">Randy Osborne</a>
+                                    </div>
+                                </li>
+                                <li>05-06-2021</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
+                    <div class="single-blog-post">
+                        <div class="post-image">
+                            <a href="{% url 'blog.html'%}" class="d-block"><img src="{% static 'assets/img/blog/blog-img3.jpg' %}" alt="image"></a>
+                        </div>
+
+                        <div class="post-content">
+                            <h3><a href="{% url 'blog.html'%}vacy">It is very important to wear proper clothing to keep yourself free</a></h3>
+                            <ul class="post-meta align-items-center d-flex">
+                                <li>
+                                    <div class="flex align-items-center">
+                                        <img src="{% static 'assets/img/user3.jpg' %}" alt="image">
+                                        <a href="#">Patricia Marcus</a>
+                                    </div>
+                                </li>
+                                <li>04-06-2021</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Area -->
+
+    <!-- Start Facility Area -->
+    <section class="facility-area bg-f7f8fa pt-70 pb-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 col-md-3 col-6">
+                    <div class="single-facility-box">
+                        <div class="icon">
+                            <i class="flaticon-free-shipping"></i>
+                        </div>
+                        <h3>Free Shipping</h3>
+                        <p>Free shipping world wide</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 col-md-3 col-6">
+                    <div class="single-facility-box">
+                        <div class="icon">
+                            <i class="flaticon-headset"></i>
+                        </div>
+                        <h3>Support 24/7</h3>
+                        <p>Contact us 24 hours a day</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 col-md-3 col-6">
+                    <div class="single-facility-box">
+                        <div class="icon">
+                            <i class="flaticon-secure-payment"></i>
+                        </div>
+                        <h3>Secure Payments</h3>
+                        <p>100% payment protection</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 col-md-3 col-6">
+                    <div class="single-facility-box">
+                        <div class="icon">
+                            <i class="flaticon-return-box"></i>
+                        </div>
+                        <h3>Easy Return</h3>
+                        <p>Simple returns policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Facility Area -->
+
+    <!-- Start Footer Area -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 col-md-6">
+                    <div class="single-footer-widget">
+                        <a href="#" class="logo d-inline-block"><img src="{% static 'assets/img/medvalley.png' %}" alt="image"></a>
+                        <ul class="footer-contact-info">
+                            <li><span>Hotline:</span> <a href="#">16768</a></li>
+                            <li><span>Phone:</span> <a href="tel:+1234567898">(+123) 456-7898</a></li>
+                            <li><span>Email:</span> <a href="https://www.MedValley.com/">[email&#160;protected]</span></a></li>
+                            <li><span>Address:</span> <a href="#" target="_blank">6890 Blvd, The Bronx, NY 1058, USA</a></li>
+                        </ul>
+                        <ul class="social">
+                            <li><a href="#" target="_blank"><i class='bx bxl-facebook-square'></i></a></li>
+                            <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class='bx bxl-instagram-alt'></i></a></li>
+                            <li><a href="#" target="_blank"><i class='bx bxl-linkedin-square'></i></a></li>
+                            <li><a href="#" target="_blank"><i class='bx bxl-pinterest'></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 col-md-6">
+                    <div class="single-footer-widget">
+                        <h3>Information</h3>
+
+                        <ul class="link-list">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Delivery Information</a></li>
+                            <li><a href="#">Orders and Returns</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 col-md-6">
+                    <div class="single-footer-widget">
+                        <h3>Customer Care</h3>
+
+                        <ul class="link-list">
+                            <li><a href="#">Help & FAQs</a></li>
+                            <li><a href="#">Purchasing Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <p>Copyright @2023 MedValley. Designed By <a href="#" target="_blank">MedValley</a></p>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="payment-types">
+                            <ul class="d-flex align-items-center justify-content-end">
+                                <li>We accept payment via:</li>
+                                <li>
+                                    <a href="#" target="_blank"><img src="{% static 'assets/img/payment-types/visa.png' %}" alt="image"></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><img src="{% static 'assets/img/payment-types/visa.png' %}" alt="image"></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><img src="{% static 'assets/img/payment-types/paypal.png' %}" alt="image"></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><img src="{% static 'assets/img/payment-types/descpver.png' %}" alt="image"></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><img src="{% static 'assets/img/payment-types/american-express.png' %}" alt="image"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+
+    <!-- Start QuickView Modal Area -->
+    <div class="modal fade productsQuickView" id="productsQuickView" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class='bx bx-x'></i></span>
+                    </button>
+
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="products-image">
+                            <img src="assets/img/products/products-img1.jpg" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="products-content">
+                            <h3><a href="#">Coronavirus Face Mask</a></h3>
+
+                            <div class="price">
+                                <span class="old-price">$45.00</span>
+                                <span class="new-price">$39.00</span>
+                            </div>
+
+                            <div class="products-review">
+                                <div class="rating">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                </div>
+                                <a href="#" class="rating-count">3 reviews</a>
+                            </div>
+
+                            <ul class="products-info">
+                                <li><span>Vendor:</span> <a href="#">Lereve</a></li>
+                                <li><span>Availability:</span> <a href="#">In stock (7 items)</a></li>
+                                <li><span>Products Type:</span> <a href="#">Mask</a></li>
+                            </ul>
+
+                            <div class="products-color-switch">
+                                <h4>Color:</h4>
+
+                                <ul>
+                                    <li>
+                                        <a href="#" data-bs-toggle="tooltip" data-placement="top" title="Black" class="color-black"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-bs-toggle="tooltip" data-placement="top" title="White" class="color-white"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-bs-toggle="tooltip" data-placement="top" title="Green" class="color-green"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-bs-toggle="tooltip" data-placement="top" title="Yellow Green" class="color-yellowgreen"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-bs-toggle="tooltip" data-placement="top" title="Teal" class="color-teal"></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="products-size-wrapper">
+                                <h4>Size:</h4>
+
+                                <ul>
+                                    <li><a href="#">XS</a></li>
+                                    <li class="active"><a href="#">S</a></li>
+                                    <li><a href="#">M</a></li>
+                                    <li><a href="#">XL</a></li>
+                                    <li><a href="#">XXL</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="products-add-to-cart">
+                                <div class="input-counter">
+                                    <span class="minus-btn"><i class='bx bx-minus'></i></span>
+                                    <input type="text" min="1" value="1">
+                                    <span class="plus-btn"><i class='bx bx-plus'></i></span>
+                                </div>
+
+                                <button type="submit" class="default-btn"><i class="flaticon-trolley"></i> Add to Cart</button>
+                            </div>
+
+                            <a href="#" class="view-full-info">or View Full Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End QuickView Modal Area -->
+
+    <!-- Start Shopping Cart Modal -->
+    <div class="modal right fade shoppingCartModal" id="shoppingCartModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class='bx bx-x'></i></span>
+                    </button>
+
+                <div class="modal-body">
+                    <h3>My Cart (3)</h3>
+
+                    <div class="products-cart-content">
+                        <div class="products-cart d-flex align-items-center">
+                            <div class="products-image">
+                                <a href="#"><img src="{% static 'assets/img/products/products-img1.jpg' %}" alt="image"></a>
+                            </div>
+
+                            <div class="products-content">
+                                <h3><a href="#">Coronavirus Face Mask</a></h3>
+                                <div class="products-price">
+                                    <span>1</span>
+                                    <span>x</span>
+                                    <span class="price">$39.00</span>
+                                </div>
+                            </div>
+                            <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
+                        </div>
+
+                        <div class="products-cart d-flex align-items-center">
+                            <div class="products-image">
+                                <a href="#"><img src="{% static 'assets/img/products/products-img2.jpg' %}" alt="image"></a>
+                            </div>
+
+                            <div class="products-content">
+                                <h3><a href="#">Protective Gloves</a></h3>
+                                <div class="products-price">
+                                    <span>1</span>
+                                    <span>x</span>
+                                    <span class="price">$99.00</span>
+                                </div>
+                            </div>
+                            <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
+                        </div>
+
+                        <div class="products-cart d-flex align-items-center">
+                            <div class="products-image">
+                                <a href="#"><img src="{% static 'assets/img/products/products-img3.jpg' %}" alt="image"></a>
+                            </div>
+
+                            <div class="products-content">
+                                <h3><a href="#">Infrared Thermometer Gun</a></h3>
+                                <div class="products-price">
+                                    <span>1</span>
+                                    <span>x</span>
+                                    <span class="price">$90.00</span>
+                                </div>
+                            </div>
+                            <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="products-cart-subtotal">
+                        <span>Subtotal</span>
+
+                        <span class="subtotal">$228.00</span>
+                    </div>
+
+                    <div class="products-cart-btn">
+                        <a href="#" class="default-btn">Proceed to Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Shopping Cart Modal -->
+
+    <!-- Start Shopping Cart Modal -->
+    <div class="modal right fade shoppingWishlistModal" id="shoppingWishlistModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class='bx bx-x'></i></span>
+                    </button>
+
+                <div class="modal-body">
+                    <h3>My Wishlist (3)</h3>
+
+                    <div class="products-cart-content">
+                        <div class="products-cart d-flex align-items-center">
+                            <div class="products-image">
+                                <a href="#"><img src="assets/img/products/products-img1.jpg" alt="image"></a>
+                            </div>
+
+                            <div class="products-content">
+                                <h3><a href="#">Coronavirus Face Mask</a></h3>
+                                <div class="products-price">
+                                    <span>1</span>
+                                    <span>x</span>
+                                    <span class="price">$39.00</span>
+                                </div>
+                            </div>
+                            <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
+                        </div>
+
+                        <div class="products-cart d-flex align-items-center">
+                            <div class="products-image">
+                                <a href="#"><img src="assets/img/products/products-img2.jpg" alt="image"></a>
+                            </div>
+
+                            <div class="products-content">
+                                <h3><a href="#">Protective Gloves</a></h3>
+                                <div class="products-price">
+                                    <span>1</span>
+                                    <span>x</span>
+                                    <span class="price">$99.00</span>
+                                </div>
+                            </div>
+                            <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
+                        </div>
+
+                        <div class="products-cart d-flex align-items-center">
+                            <div class="products-image">
+                                <a href="#"><img src="assets/img/products/products-img3.jpg" alt="image"></a>
+                            </div>
+
+                            <div class="products-content">
+                                <h3><a href="#">Infrared Thermometer Gun</a></h3>
+                                <div class="products-price">
+                                    <span>1</span>
+                                    <span>x</span>
+                                    <span class="price">$90.00</span>
+                                </div>
+                            </div>
+                            <a href="#" class="remove-btn"><i class='bx bx-trash'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="products-cart-subtotal">
+                        <span>Subtotal</span>
+
+                        <span class="subtotal">$228.00</span>
+                    </div>
+
+                    <div class="products-cart-btn">
+                        <a href="#" class="default-btn">View Shopping Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Shopping Cart Modal -->
+
+    <!-- Start Products Filter Modal Area -->
+    <div class="modal left fade productsFilterModal" id="productsFilterModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class='bx bx-x'></i> Close</span>
+                    </button>
+
+                <div class="modal-body">
+                    <div class="woocommerce-widget-area">
+                        <div class="woocommerce-widget price-list-widget">
+                            <h3 class="woocommerce-widget-title">Filter By Price</h3>
+
+                            <div class="collection-filter-by-price">
+                                <input class="js-range-of-price" type="text" data-min="0" data-max="1055" name="filter_by_price" data-step="10">
+                            </div>
+                        </div>
+
+                        <div class="woocommerce-widget color-list-widget">
+                            <h3 class="woocommerce-widget-title">Color</h3>
+
+                            <ul class="color-list-row">
+                                <li class="active">
+                                    <a href="#" title="Black" class="color-black"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Red" class="color-red"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Yellow" class="color-yellow"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="White" class="color-white"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Blue" class="color-blue"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Green" class="color-green"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Yellow Green" class="color-yellowgreen"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Pink" class="color-pink"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Violet" class="color-violet"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Blue Violet" class="color-blueviolet"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Lime" class="color-lime"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Plum" class="color-plum"></a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Teal" class="color-teal"></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="woocommerce-widget brands-list-widget">
+                            <h3 class="woocommerce-widget-title">Brands</h3>
+
+                            <ul class="brands-list-row">
+                                <li><a href="#">Gucci</a></li>
+                                <li><a href="#">Virgil Abloh</a></li>
+                                <li><a href="#">Balenciaga</a></li>
+                                <li class="active"><a href="#">Moncler</a></li>
+                                <li><a href="#">Fendi</a></li>
+                                <li><a href="#">Versace</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="woocommerce-widget woocommerce-ads-widget">
+                            <img src="assets/img/ads.jpg" alt="image">
+
+                            <div class="content">
+                                <span>New Arrivals</span>
+                                <h3>Modern Electronic Thermometer</h3>
+                                <a href="#" class="default-btn"><i class="flaticon-trolley"></i> Shop Now</a>
+                            </div>
+
+                            <a href="#" class="link-btn"></a>
+                        </div>
+
+                        <div class="woocommerce-widget best-seller-widget">
+                            <h3 class="woocommerce-widget-title">Best Seller</h3>
+
+                            <article class="item">
+                                <a href="#" class="thumb">
+                                    <span class="fullimage cover bg1" role="img"></span>
+                                </a>
+                                <div class="info">
+                                    <h4 class="title usmall"><a href="#">Thermometer Gun</a></h4>
+                                    <span>$99.00</span>
+                                    <div class="rating">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </article>
+
+                            <article class="item">
+                                <a href="#" class="thumb">
+                                    <span class="fullimage cover bg2" role="img"></span>
+                                </a>
+                                <div class="info">
+                                    <h4 class="title usmall"><a href="#">Protective Gloves</a></h4>
+                                    <span>$65.00</span>
+                                    <div class="rating">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </article>
+
+                            <article class="item">
+                                <a href="#" class="thumb">
+                                    <span class="fullimage cover bg3" role="img"></span>
+                                </a>
+                                <div class="info">
+                                    <h4 class="title usmall"><a href="#">Cosmetic Container</a></h4>
+                                    <span>$139.00</span>
+                                    <div class="rating">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bx-star'></i>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Products Filter Modal Area -->
+    
+    <!-- Start Login Alert Area-->
+    <div id="login_status">
+        {% if login_status %}
+              1 <script></script>
+        {% else %}
+              0
+        {% endif %}
+      
+        </div>
+        <div>
+          {% for message in messages %}
+            <div class="alert {{ message.tags }}" role="alert">
+              {{ message }}
+            </div>
+              {% endfor %}
+        </div>
+        <script>
+            function login_prompt(){
+                var login_status = document.getElementById("login_status").innerText
+                if(login_status==0){
+                  //let userInput = prompt("You nedd to login first !");
+            
+                  if (confirm("You need to login")) 
+                  {
+                    txt = "You pressed OK!";
+                  } 
+                else 
+                  {
+                    txt = "You pressed Cancel!";
+                  }
+                }
+               }
+        </script>
+    <!-- End Login Alert Area-->
+
+    <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
+
+    <!-- Links of JS files -->
+    <script data-cfasync="false" src="{% static '../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel2.thumbs.min.js' %}"></script>
+    <script src="{% static 'assets/js/meanmenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/rangeSlider.min.js' %}"></script>
+    <script src="{% static 'assets/js/sticky-sidebar.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'assets/js/contact-form-script.js' %}"></script>
+    <script src="{% static 'assets/js/ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'assets/js/main1.js' %}"></script>
+</body>
+
+</html>

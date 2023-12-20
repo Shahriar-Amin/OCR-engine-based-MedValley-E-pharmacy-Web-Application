@@ -1,0 +1,54 @@
+<div>
+
+   {% if error_name %}
+       <div class="text-danger">
+           Please Enter Name
+       </div>
+   {% endif %}
+   {% if error_email %}
+       <div class="text-danger">
+           Please Enter Email
+       </div>
+   {% endif %}
+   {% if error_password %}
+       <div class="text-danger">
+           Please Enter Password
+       </div>
+   {% endif %}
+   {% if error_password_num %}
+       <div class="text-danger">
+           Password must greater than 3 characters.
+       </div>
+   {% endif %}
+   {% if error_email_valid %}
+       <div class="text-danger">
+           Invalid Email
+       </div>
+   {% endif %}
+
+   {% if password_char %}
+       <div class="text-danger">
+           Password must contain an upper case and lower case.
+       </div>
+   {% endif %}
+   
+   {% for message in messages %}
+		<div class="alert {{ message.tags }}" role="alert">
+		{{ message }}
+		</div>
+	{% endfor %}
+    
+
+    
+
+
+    <div class="text-primary">
+        {{ email_message }}
+    </div>
+
+
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+
+</div>
